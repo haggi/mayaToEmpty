@@ -54,7 +54,7 @@ MStatus initializePlugin( MObject obj )
 	setRendererShortCutName("mt");
 	setRendererHome(getenv("mt_HOME"));
 
-	MString cmd = MString("import mt_initialize as minit; minit.initRenderer()");
+	MString cmd = MString("import MayaTo.mt_initialize as minit; minit.initRenderer()");
 	MGlobal::displayInfo("try to register...");
 	status = MGlobal::executePythonCommand(cmd, true, false);
 	if(!status)
